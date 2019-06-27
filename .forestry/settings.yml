@@ -1,13 +1,12 @@
 ---
 new_page_extension: md
-auto_deploy: false
+auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
 - type: document
   path: _testing/*
   label: Testing
-  match: "**/*"
 - type: heading
   label: Content
 - type: jekyll-posts
@@ -51,7 +50,7 @@ build:
   publish_env:
   - JEKYLL_ENV=production
   preview_output_directory: _site
-  output_directory: _site
+  output_directory: _site 12
   instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
     --port 8080 --host 0.0.0.0 -d _site
   preview_docker_image: forestryio/ruby:2.6
